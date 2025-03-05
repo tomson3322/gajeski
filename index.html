@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odbanujcie Macieja Gajewskiego!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        p {
+            font-size: 18px;
+        }
+        button {
+            background-color: #5bc0de;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #31b0d5;
+        }
+        #petition {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Odbanujcie Macieja Gajewskiego!</h1>
+        <p>Maciej Gajewski został niesłusznie zbanowany! To jawna niesprawiedliwość i zamach na wolność internetu!</p>
+        <p>Podpisz petycję już teraz!</p>
+        <button onclick="generatePetition()">Podpisz petycję</button>
+        <p id="petition"></p>
+    </div>
+
+    <script>
+        function generatePetition() {
+            let reasons = [
+                "Maciej jest dobrym człowiekiem!",
+                "Nie można banować za bycie zbyt genialnym!",
+                "To atak na demokrację!",
+                "Bez niego internet nie ma sensu!",
+                "To był tylko niewinny żarcik!",
+                "Ktoś inny powinien być zbanowany, ale nie Maciej!",
+                "Niech żyje wolność słowa!",
+                "Internet płacze bez Macieja!"
+            ];
+            let reason = reasons[Math.floor(Math.random() * reasons.length)];
+            document.getElementById("petition").innerHTML = 
+                "Petycja podpisana! Powód: " + reason;
+        }
+    </script>
+
+</body>
+</html>
